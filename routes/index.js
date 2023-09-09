@@ -1,7 +1,15 @@
 const express = require("express");
-const { getMyPosts, searchByHashtag, test } = require("../controllers/index");
+const {
+  renderMain,
+  getMyPosts,
+  searchByHashtag,
+  test,
+} = require("../controllers/index");
 
 const router = express.Router();
+
+// 브라우저에서 요청 test
+router.get("/", renderMain);
 
 // posts 스크랩핑 api test
 router.get("/myposts", getMyPosts);

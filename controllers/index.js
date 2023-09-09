@@ -1,4 +1,5 @@
 const axios = require("axios");
+// 서버에서 서버로 요청보내는 axios
 
 const URL = process.env.API_URL;
 axios.defaults.headers.origin = process.env.ORIGIN;
@@ -43,6 +44,10 @@ exports.searchByHashtag = async (req, res, next) => {
     console.error(error);
     next(error);
   }
+};
+
+exports.renderMain = (req, res) => {
+  res.render("main", { key: process.env.CLIENT_SECRET });
 };
 
 exports.test = async (req, res, next) => {
