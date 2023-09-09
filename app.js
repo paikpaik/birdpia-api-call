@@ -7,8 +7,8 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 const indexRouter = require("./routes/index");
-const app = express();
 
+const app = express();
 app.set("port", process.env.PORT || 4001);
 app.set("view engine", "html");
 nunjucks.configure("views", {
