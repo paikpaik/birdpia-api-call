@@ -47,6 +47,7 @@ exports.searchByHashtag = async (req, res, next) => {
 };
 
 exports.renderMain = (req, res) => {
+  // 브라우저에서 서버로 보내는 axios
   res.render("main", { key: process.env.CLIENT_SECRET });
 };
 
